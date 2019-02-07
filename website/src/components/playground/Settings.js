@@ -6,6 +6,7 @@ import SettingsGroup from './SettingsGroup'
 import SettingsFieldString from './SettingsFieldString'
 import SettingsFieldEnum from './SettingsFieldEnum'
 import SettingsFieldInteger from './SettingsFieldInteger'
+import Ad from './Ad'
 
 const SettingsContainer = styled.div`
   width: 100%;
@@ -53,6 +54,7 @@ const Settings = ({ settings, initialValues, onChange }) => (
         <SettingsContainer direction="column">
           <SettingsGroup title="Global">
             {getGroupSettings('global', settings).map(renderSetting)}
+            <Ad />
           </SettingsGroup>
           <SettingsGroup title="SVGO">
             {getGroupSettings('svgo', settings).map(renderSetting)}
